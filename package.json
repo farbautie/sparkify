@@ -1,0 +1,11 @@
+{
+  "name": "sparkify",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "author": "Camilo Vargas <ca06vargas@gmail.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
