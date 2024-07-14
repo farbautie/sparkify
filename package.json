@@ -6,6 +6,12 @@
   "main": "index.js",
   "author": "Camilo Vargas <ca06vargas@gmail.com>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "swc ./lib -d ./dist"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.4.0",
+    "@swc/core": "1.7.0-nightly-20240713.1",
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
   }
 }
