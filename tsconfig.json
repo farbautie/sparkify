@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "es2016",
     "module": "commonjs",
-    "moduleResolution": "Node16",
-    "removeComments": false,
-    "noImplicitAny": false,
     "strict": true,
-    "outDir": "./dist",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "baseUrl": "./lib",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
   "include": ["lib/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
