@@ -5,6 +5,16 @@ import { Route } from "@/types";
 
 const paramPattern = /\[([^\]]+?)\]/g;
 
+export function parseQuery(queryString: string) {
+  const query: Record<string, string> = {};
+  const pairs = queryString.split("&");
+  for (const pair of pairs) {
+    const [key, value] = pair.split("=");
+    query[key] = value;
+  }
+  return query;
+}
+
 export function isFunction(value: any): value is Function {
   return typeof value === "function";
 }
@@ -59,9 +69,17 @@ export function matcher(route: Route) {
     const url = req.url || "/";
     const match = url.match(route.pattern);
     if (!match) return false;
+
+    const params = paramNames.reduce((acc, paramName, idx) => {
+      acc[paramName] = match[idx + 1];
+      return acc;
+    }, {} as any);
+
+    const query = parseQuery(match[match.length - 1] || "");
+
     return {
-      params: "",
-      query: "",
+      params,
+      query,
     };
   };
   return route;
