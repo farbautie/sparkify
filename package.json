@@ -1,7 +1,7 @@
 {
   "name": "sparkify",
   "description": "",
-  "version": "0.0.2-experimental",
+  "version": "0.0.3-experimental",
   "license": "MIT",
   "main": "index.js",
   "author": "Camilo Vargas <ca06vargas@gmail.com>",
