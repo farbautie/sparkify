@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "removeComments": true,
+    "outDir": "dist",
     "baseUrl": "./lib",
     "paths": {
       "@/*": ["./*"]
